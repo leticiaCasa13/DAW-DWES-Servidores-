@@ -1,22 +1,36 @@
 # Desarrollo Web en Entorno Servidor (DWES)
 
-Prácticas y proyectos realizados durante el ciclo de Desarrollo de Aplicaciones Web (DAW).
+Repositorio de prácticas y proyectos realizados durante el ciclo de Desarrollo de Aplicaciones Web (DAW).
 
-## Tecnologías utilizadas
+## Tecnologías
 
+- Java
+- Jakarta EE
+- Servlets
 - JSP
+- JSTL
+- JavaBeans
+- JDBC
 - MySQL
-- HTML5
-- CSS3
-- JavaScript
-- JAKARTA
+- Gestión de Sesiones HTTP
 
-## Contenido
+## Prácticas
 
-### Prácticas
+### 01 - Fundamentos JSP
+- Expresiones
+- Declaraciones
+- Scriptlets
 
-- Práctica 1
-- Práctica 2
-- Práctica 3
+### 02 - Servlets y Peticiones HTTP
 
-### Proyectos
+### 03 - JavaBeans y JSTL
+
+### 04 - JDBC y MySQL
+
+### 05 - Gestión de Sesiones
+
+### 06 - Aplicación Web Completa
+
+## Autor
+
+Leticia
