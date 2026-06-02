@@ -8,7 +8,17 @@ Repositorio de prácticas y proyectos realizados durante el ciclo de Desarrollo 
 - Jakarta EE
 - Servlets
 - JSP
-- JSTL
+- JSTL- 01 → Servlets básicos con ArrayList
+- 02 → Gestión de entidades con Servlets
+- 03 → Introducción a MVC con JSP
+- 04 → Registro de usuarios con validación
+- 05 → JDBC y acceso a base de datos
+- 06 → Sistema de login y sesiones- 01 → Servlets básicos con ArrayList
+- 02 → Gestión de entidades con Servlets
+- 03 → Introducción a MVC con JSP
+- 04 → Registro de usuarios con validación
+- 05 → JDBC y acceso a base de datos
+- 06 → Sistema de login y sesiones
 - JavaBeans
 - JDBC
 - MySQL
@@ -16,20 +26,14 @@ Repositorio de prácticas y proyectos realizados durante el ciclo de Desarrollo 
 
 ## Prácticas
 
-### 01 - Fundamentos JSP
-- Expresiones
-- Declaraciones
-- Scriptlets
+## Evolución de las Prácticas
 
-### 02 - Servlets y Peticiones HTTP
-
-### 03 - JavaBeans y JSTL
-
-### 04 - JDBC y MySQL
-
-### 05 - Gestión de Sesiones
-
-### 06 - Aplicación Web Completa
+- 01 → Servlets básicos con ArrayList
+- 02 → Gestión de entidades con Servlets
+- 03 → Introducción a MVC con JSP
+- 04 → Registro de usuarios con validación
+- 05 → JDBC y acceso a base de datos
+- 06 → Sistema de login y sesiones
 
 ## Autor
 
