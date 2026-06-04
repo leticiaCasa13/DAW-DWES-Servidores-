@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestión Estudiantes</title>
+
+    <style>
+        body {
+            background-color: #7b4ca0;
+            font-family: Arial;
+            color: white;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        /* enlaces arriba */
+        .top-links {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+
+        .top-links a {
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            margin-left: 15px;
+        }
+
+        .top-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* cajas */
+        .bloque {
+            border: 2px solid white;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+            background-color: rgba(255, 255, 255, 0.08);
+        }
+
+        .bloque h2 {
+            margin-top: 0;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        textarea {
+            width: 400px;
+            padding: 5px;
+            vertical-align: middle;
+        }
+
+        input {
+            padding: 5px;
+            margin-right: 10px;
+            width: 150px;
+        }
+
+        label {
+            margin-right: 5px;
+            font-weight: bold;
+        }
+
+        button {
+            padding: 6px 12px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+
+        /* informes en línea */
+        .informes-form {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .radio-linea {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .radio-linea label {
+            font-weight: bold;
+            margin: 0;
+        }
+    </style>
+
+    <script>
+        function desconectar() {
+            let salir = confirm("Con esta acción se finaliza la sesión actual. ¿Estás seguro?");
+            if (salir) {
+                window.location = "/Gestion-Estudiantes/desconectar";
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+<h1>Gestión de estudiantes</h1>
+
+<!-- enlaces arriba -->
+<div class="top-links">
+    <a href="/Gestion-Estudiantes/info">Info sesión</a>
+    <a href="javascript:desconectar()">Desconectar</a>
+</div>
+
+<!-- bloque ejecutar -->
+<div class="bloque">
+    <h2>Consulta alumnos</h2>
+
+    <form action="/Gestion-Estudiantes/ejecutar" method="post">
+        <textarea name="sentencia" rows="1">SELECT * FROM alumnos</textarea>
+        <button type="submit">Ejecutar</button>
+    </form>
+</div>
+
+<!-- bloque alta -->
+<div class="bloque">
+    <h2>Alta alumno</h2>
+
+    <form action="/Gestion-Estudiantes/alta" method="post">
+        <label>ID alumno</label>
+        <input type="number" name="id" required>
+
+        <label>Curso</label>
+        <input type="text" name="curso" required>
+
+        <label>Nombre</label>
+        <input type="text" name="nombre" required>
+
+        <button type="submit">Alta alumno</button>
+    </form>
+</div>
+
+<!-- bloque informes -->
+<div class="bloque">
+    <h2>Informes</h2>
+
+    <form action="/Gestion-Estudiantes/report" method="get" class="informes-form">
+
+        <div class="radio-linea">
+            <input type="radio" name="optInformes" value="application/pdf" required>
+            <label>PDF</label>
+        </div>
+
+        <div class="radio-linea">
+            <input type="radio" name="optInformes" value="text/html">
+            <label>HTML</label>
+        </div>
+
+        <div class="radio-linea">
+            <input type="radio" name="optInformes" value="application/vnd.ms-excel">
+            <label>EXCEL</label>
+        </div>
+
+        <div class="radio-linea">
+            <input type="radio" name="optInformes"
+                   value="application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+            <label>WORD</label>
+        </div>
+
+        <button type="submit">Generar informe</button>
+    </form>
+</div>
+
+</body>
+</html>

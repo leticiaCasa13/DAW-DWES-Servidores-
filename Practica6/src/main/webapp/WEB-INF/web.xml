@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee
+         https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0">
+
+
+    <display-name>Gestion-EstudiantesMysql</display-name>
+
+    <!-- Página de inicio -->
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+
+    <!-- Servlet principal (GestionEstudiantesServlet) -->
+    <servlet>
+        <servlet-name>GestionEstudiantesServlet</servlet-name>
+        <servlet-class>net.elpuig.gestioestud.servlet.GestionEstudiantesServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>GestionEstudiantesServlet</servlet-name>
+        <url-pattern>/ejecutar</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>GestionEstudiantesServlet</servlet-name>
+        <url-pattern>/alta</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet-mapping>
+        <servlet-name>GestionEstudiantesServlet</servlet-name>
+        <url-pattern>/info</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>GestionEstudiantesServlet</servlet-name>
+        <url-pattern>/desconectar</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>GestionEstudiantesServlet</servlet-name>
+        <url-pattern>/validar</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Report</servlet-name>
+        <servlet-class>net.elpuig.gestioestud.servlet.Report</servlet-class>
+        <async-supported>true</async-supported>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Report</servlet-name>
+        <url-pattern>/report</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ImageServlet</servlet-name>
+        <servlet-class>net.sf.jasperreports.j2ee.servlets.ImageServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ImageServlet</servlet-name>
+        <url-pattern>/image</url-pattern>
+    </servlet-mapping>
+
+
+    <listener>
+        <listener-class>net.elpuig.gestioestud.servlet.WebSessionListener</listener-class>
+    </listener>
+
+    <session-config>
+        <session-timeout>15</session-timeout>
+    </session-config>
+
+</web-app>
+
+
+
+
+
