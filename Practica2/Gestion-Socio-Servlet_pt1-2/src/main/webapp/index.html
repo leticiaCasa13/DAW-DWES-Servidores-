@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Socios del Club</title>
+   <style>
+       body {
+          background-color: #7b4ca0;
+          font-family: Arial;
+          color: white;
+          padding: 15px;
+      }
+
+      textarea {
+          width: 400px;
+           padding: 4px;
+           vertical-align: middle;  /* alineación con botón  */
+     }
+        input {
+          padding: 4px;
+          margin-right: 10px;
+          width: 150px;
+
+        }
+
+        label {
+            margin-right: 5px;
+            font-weight: bold
+       }
+
+        button {
+            padding: 6px 12px;
+            margin-left: 10px;
+        }
+
+   </style>
+
+</head>
+
+<body>
+<h1 style="text-align:center;">Club deportivo de Socios</h1>
+
+
+<!-- hacemos la consulta-->
+
+<form action="ejecutar" method= "post">
+    <textarea name ="sentencia" rows="1" >SELECT * FROM socios</textarea>
+    <button type="submit">Ejecutar</button>
+</form>
+<br><br>
+<form action="alta" method="post">
+    <label>ID socio</label>
+    <input type="number" name="id">
+
+    <label>Deporte</label>
+    <input type="text" name="deporte">
+
+    <label>Nombre</label>
+    <input type="text" name="nombre">
+    <button type="submit">Alta socio</button>
+
+</form>
+
+</body>
+</html>
