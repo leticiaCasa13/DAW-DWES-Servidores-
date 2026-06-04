@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestión Estudiantes</title>
+
+    <style>
+        body {
+            background-color: #7b4ca0;
+            font-family: Arial;
+            color: white;
+            padding: 15px;
+        }
+
+
+        textarea {
+             width: 400px;
+             padding: 4px;
+             vertical-align: middle;  /* alineación con botón  */
+        }
+
+
+        input {
+          padding: 4px;
+          margin-right: 10px;
+          width: 150px;
+
+        }
+
+        label {
+            margin-right: 5px;
+            font-weight: bold
+       }
+
+        button {
+            padding: 6px 12px;
+            margin-left: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+<h1 style="text-align:center;">Gestión de estudiantes</h1>
+
+<br><br>
+
+<!-- hacemos la consulta-->
+    <form action="/Gestion-Estudiantes/ejecutar" method="post">
+        <textarea name="sentencia" rows="1" >SELECT * FROM alumnos</textarea>
+        <button type="submit">Ejecutar</button>
+    </form>
+
+   <br><br>
+
+<!-- formulario de alta-->
+    <form action="/Gestion-Estudiantes/alta" method="post">
+
+        <label>ID alumno</label>
+        <input type="number" name="id" required >
+
+
+        <label>Curso</label>
+        <input type="text" name="curso" required >
+
+
+        <label>Nombre</label>
+        <input type="text" name="nombre" required >
+
+        <button type="submit">Alta alumno</button>
+    </form>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
